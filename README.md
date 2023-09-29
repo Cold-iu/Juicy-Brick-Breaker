@@ -1,19 +1,21 @@
-# Project Name
+# Juicy Brick Breaker
 
-Context and date
+Juicy 2d Brick Breaker Game
 
-Description
 
 
 ## Implementation
 
 Which features you included
+♦Particles When paddle hits the ball
+♦Personal theme 
 
 
 ## References
-
+https://fontesk.com/10-pixel-typeface/ (10 pixel typeface
 
 ## Future Development
 
 
-## Created by
+## Created 
+Charly Coles
