@@ -6,13 +6,13 @@ Juicy 2d Brick Breaker Game
 
 ## Implementation
 
-Which features you included
-♦Particles When paddle hits the ball
-♦Personal theme 
+♦ Particles When paddle hits the ball
+♦ Particles when ball hits bricks
+♦ Personal Theme 
 
 
 ## References
-https://fontesk.com/10-pixel-typeface/ (10 pixel typeface
+https://fontesk.com/10-pixel-typeface/ (10 pixel typeface)
 
 ## Future Development
 
