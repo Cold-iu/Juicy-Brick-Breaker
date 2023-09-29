@@ -1,0 +1,26 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://nfgyqcynyyel"]
+
+[ext_resource type="FontFile" uid="uid://biwdh63dfcg4s" path="res://Assets/Fonts/10Pixel-Bold.ttf" id="1_lej0k"]
+[ext_resource type="FontFile" uid="uid://dqd3an7wev11s" path="res://Assets/Fonts/10Pixel-Bold.otf" id="2_6lr7l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gc5ns"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 4
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 4
+border_color = Color(0.721569, 0.796078, 1, 1)
+shadow_color = Color(1, 0.956863, 0, 0.6)
+shadow_size = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w36x1"]
+
+[resource]
+Button/colors/font_color = Color(1, 0.54902, 0, 1)
+Button/font_sizes/font_size = 52
+Button/fonts/font = ExtResource("1_lej0k")
+Button/styles/normal = SubResource("StyleBoxFlat_gc5ns")
+Label/colors/font_color = Color(1, 0.901961, 0, 1)
+Label/font_sizes/font_size = 136
+Label/fonts/font = ExtResource("2_6lr7l")
+Label/styles/normal = SubResource("StyleBoxEmpty_w36x1")

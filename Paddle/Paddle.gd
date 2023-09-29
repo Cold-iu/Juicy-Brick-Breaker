@@ -22,7 +22,8 @@ func _input(event):
 		target.x += event.relative.x
 
 func hit(_ball):
-	pass
+	$On_Hit_Effect.color = Color8(randi_range(0,255),randi_range(0,255),randi_range(0,255),255)
+	$On_Hit_Effect.emitting = true
 
 func powerup(payload):
 	for c in $Powerups.get_children():

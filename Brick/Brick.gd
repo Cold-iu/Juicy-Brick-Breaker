@@ -10,11 +10,15 @@ func _ready():
 	randomize()
 	position = new_position
 
+
 func _physics_process(_delta):
 	if dying:
 		queue_free()
-
+		
+		
 func hit(_ball):
+	$On_Hit_Effect.color = Color8(randi_range(0,255),randi_range(0,255),randi_range(0,255),255)
+	$On_Hit_Effect.emitting = true
 	die()
 
 func die():
