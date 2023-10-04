@@ -8,7 +8,8 @@ Juicy 2d Brick Breaker Game
 
 ♦ Particles When paddle hits the ball
 ♦ Particles when ball hits bricks
-♦ Personal Theme 
+♦ Personal Theme
+♦Tweening for walls, paddle and ball.
 
 
 ## References
