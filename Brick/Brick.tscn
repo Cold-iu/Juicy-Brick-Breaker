@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bjvdmnbj44w6x"]
+[gd_scene load_steps=5 format=3 uid="uid://bjvdmnbj44w6x"]
 
 [ext_resource type="Script" path="res://Brick/Brick.gd" id="1"]
+[ext_resource type="AudioStream" uid="uid://brog25r4gyt66" path="res://Assets/Brick_sound.wav" id="2_q7agd"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(90, 30)
@@ -41,3 +42,6 @@ angular_velocity_curve = SubResource("Curve_nw1go")
 angle_max = 320.0
 scale_amount_max = 2.0
 color = Color(0, 0, 0, 1)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_q7agd")

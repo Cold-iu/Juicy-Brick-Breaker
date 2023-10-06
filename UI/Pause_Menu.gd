@@ -1,5 +1,7 @@
 extends Control
 
+	
+	
 func _on_Restart_pressed():
 	get_tree().paused = false
 	Global.reset()

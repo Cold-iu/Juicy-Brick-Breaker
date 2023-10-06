@@ -33,6 +33,7 @@ func _ready():
 	
 
 func _on_Ball_body_entered(body):
+	$AudioListener2D.play()
 	if body.has_method("hit"):
 		body.hit(self)
 		accelerate = true
@@ -74,7 +75,7 @@ func _integrate_forces(state):
 		state.linear_velocity = state.linear_velocity.normalized() * max_speed * speed_multiplier
 
 func change_size(s):
-	$ColorRect.scale = s
+	$Ball_Sprite.scale = s
 	$CollisionShape2D.scale = s
 
 func change_speed(s):

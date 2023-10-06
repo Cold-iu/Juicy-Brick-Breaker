@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://btq537audl6jb"
+path="res://.godot/imported/Untitled score.wav-b8718a5f4b446b609f717aedb8773353.sample"
+
+[deps]
+
+source_file="res://Assets/Untitled score.wav"
+dest_files=["res://.godot/imported/Untitled score.wav-b8718a5f4b446b609f717aedb8773353.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
