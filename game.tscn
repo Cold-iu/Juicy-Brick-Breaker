@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bd5m3yq1k5fx8"]
+[gd_scene load_steps=17 format=3 uid="uid://bd5m3yq1k5fx8"]
 
 [ext_resource type="Script" path="res://Brick/Brick_Container.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://dmwf8wjdir6y5" path="res://Paddle/Paddle.tscn" id="2"]
@@ -9,6 +9,27 @@
 [ext_resource type="PackedScene" uid="uid://do7pdpjxteg8e" path="res://UI/HUD.tscn" id="7"]
 [ext_resource type="PackedScene" uid="uid://r1nm10jeqyta" path="res://UI/Instructions.tscn" id="8"]
 [ext_resource type="Script" path="res://Effects/Fever.gd" id="9"]
+[ext_resource type="Shader" path="res://Background.gdshader" id="10_vawb0"]
+[ext_resource type="Script" path="res://Camera2D.gd" id="11_2tvaw"]
+[ext_resource type="AudioStream" uid="uid://dvin0yavsmsyo" path="res://Assets/game_score.wav" id="12_4w5f1"]
+[ext_resource type="AudioStream" uid="uid://7daoafmusxna" path="res://Assets/Fever_score.wav" id="13_vqt0a"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4b0ay"]
+shader = ExtResource("10_vawb0")
+shader_parameter/iterations = 17
+shader_parameter/formuparam = 0.53
+shader_parameter/volsteps = 10
+shader_parameter/stepsize = 0.1
+shader_parameter/zoom = 0.8
+shader_parameter/tile = 0.85
+shader_parameter/speed = 0.001
+shader_parameter/brightness = 0.0015
+shader_parameter/darkmatter = 0.3
+shader_parameter/distfading = 0.73
+shader_parameter/saturation = 0.85
+shader_parameter/rotation = null
+shader_parameter/colorampMix = 0.5
+shader_parameter/isColoramp = null
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(200, 1000)
@@ -18,6 +39,11 @@ size = Vector2(1224, 200)
 
 [node name="Game" type="Node2D"]
 script = ExtResource("4")
+
+[node name="Background" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_4b0ay")
+offset_right = 1152.0
+offset_bottom = 800.0
 
 [node name="Wall_Container" type="Node2D" parent="."]
 
@@ -87,5 +113,16 @@ process_mode = 3
 visible = false
 
 [node name="Instructions" parent="UI" instance=ExtResource("8")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(584, 408)
+script = ExtResource("11_2tvaw")
+
+[node name="bg_score" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_4w5f1")
+autoplay = true
+
+[node name="Fever_Score" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_vqt0a")
 
 [connection signal="timeout" from="Fever/Timer" to="Fever" method="_on_Timer_timeout"]

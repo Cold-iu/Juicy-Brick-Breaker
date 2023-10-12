@@ -14,6 +14,9 @@ var wobble_amplitude = 0.0
 var wobble_max = 5
 var wobble_direction = Vector2.ZERO
 var decay_wobble = 0.15
+var bounce_count = 0
+var bounce_mltp = bounce_count * .2
+var bounce_reset = false
 
 var tween
 
@@ -30,6 +33,15 @@ func _ready():
 		var level = Levels.levels[Global.level]
 		min_speed *= level["multiplier"]
 		max_speed *= level["multiplier"]
+	
+
+func Bounce_points():
+	bounce_count += 1
+	bounce_mltp = bounce_count * .2
+	
+func Bounce_reset():
+	bounce_reset = true
+	
 	
 
 func _on_Ball_body_entered(body):
@@ -82,4 +94,5 @@ func change_speed(s):
 	speed_multiplier = s
 
 func die():
+	
 	queue_free()

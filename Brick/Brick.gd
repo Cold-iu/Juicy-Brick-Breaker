@@ -4,7 +4,7 @@ var score = 0
 var new_position = Vector2.ZERO
 var dying = false
 
-var powerup_prob = 0.9
+var powerup_prob = 0.1
 
 func _ready():
 	randomize()

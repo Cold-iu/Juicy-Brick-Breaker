@@ -13,6 +13,10 @@ var fever_decay = 0.1
 var feverish = false
 
 
+var bounce_count = 0
+var bounce_mltp = bounce_count * .2
+var bounce_reset = false
+
 var default_starting_in = 4
 var default_lives = 5
 

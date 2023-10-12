@@ -25,6 +25,7 @@ func update_lives():
 	for i in range(Global.lives):
 		var indicator = Indicator.instantiate()
 		indicator.position = Vector2(indicator_pos.x + i*indicator_index, indicator_pos.y)
+		indicator.modulate = Color8(randi_range(10,255),randi_range(10,255),randi_range(10,255),255)
 		$Indicator_Container.add_child(indicator)
 
 func update_fever():
